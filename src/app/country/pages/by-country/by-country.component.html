@@ -15,12 +15,12 @@
     </div>
 </div>
 <hr>
-<div class="alert alert-danger">
-    The search didn't throw results
+<div *ngIf="thereIsError" class="alert alert-danger">
+    There was not found results with {{term}} term.
 </div>
 <div class="row">
     <div class="col">
-        <table class="table table-hover">
+        <table *ngIf="!thereIsError" class="table table-hover">
             <thead>
                 <tr>
                     <th>#</th>
