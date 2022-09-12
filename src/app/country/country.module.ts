@@ -22,7 +22,8 @@ import { CountryTableComponent } from './components/country-table/country-table.
     ByCapitalComponent,
     ByCountryComponent,
     ByRegionComponent,
-    SeeCountryComponent
+    SeeCountryComponent,
+    CountryTableComponent
   ],
   imports: [
     CommonModule,
