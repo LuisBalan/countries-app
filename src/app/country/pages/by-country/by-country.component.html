@@ -3,7 +3,9 @@
 
 <div class="row">
     <div class="col">
-        <form (ngSubmit)="search()" autocomplete="off">
+        <app-country-input (onEnter)="search($event)">
+        </app-country-input>
+        <!-- <form (ngSubmit)="search()" autocomplete="off">
             <input
             type="text"
             class="form-control"
@@ -11,7 +13,7 @@
             [(ngModel)] = "term"
             placeholder="Search Country"
             />
-        </form>
+        </form> -->
     </div>
 </div>
 <hr>
