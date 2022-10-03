@@ -18,7 +18,7 @@
                     alt="Flag of {{country.name}}"
                 >
             </td>
-            <td>{{country.name}}</td>
+            <td>{{country.capital}}, {{country.name}}</td>
             <td>{{country.population | number}}</td>
             <td>
                 <a [routerLink]="['/country', country.alpha3Code]" href="/country/mex">Look...</a>

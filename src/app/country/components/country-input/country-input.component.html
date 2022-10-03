@@ -4,6 +4,7 @@
             class="form-control"
             name="term"
             [(ngModel)] = "term"
-            placeholder="Search Country"
+            (input)="pressedKey($event)"
+            [placeholder]="placeholder"
             />
         </form>

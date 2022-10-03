@@ -1,1 +1,59 @@
-<p>by-capital works!</p>
+<h2>by capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-country-input
+        (onEnter)="search($event)"
+        (onDebouce)="sugerences($event)"
+        placeholder="Search capital"
+        >
+    </app-country-input>
+        <!-- <form (ngSubmit)="search()" autocomplete="off">
+            <input
+            type="text"
+            class="form-control"
+            name="term"
+            [(ngModel)] = "term"
+            placeholder="Search Country"
+            />
+        </form> -->
+    </div>
+</div>
+<hr>
+<div *ngIf="thereIsError" class="alert alert-danger">
+    There was not found results with {{term}} term.
+</div>
+<div class="row">
+    <div class="col">
+        <!-- <table *ngIf="!thereIsError" class="table table-hover">
+            <thead *ngIf="countries.length > 0">
+                <tr>
+                    <th>#</th>
+                    <th>Flag</th>
+                    <th>Name</th>
+                    <th>Population</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of countries">
+                    <td>{{countries.indexOf(country) + 1}}</td>
+                    <td>
+                        <img
+                            class="flag-style"
+                            src="{{country.flag}}"
+                            alt="Flag of {{country.name}}"
+                        >
+                    </td>
+                    <td>{{country.name}}</td>
+                    <td>{{country.population | number}}</td>
+                    <td>
+                        <a [routerLink]="['/country', country.alpha3Code]" href="/country/mex">Look...</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+        <app-country-table [countries]="capitals"></app-country-table>
+    </div>
+</div>
